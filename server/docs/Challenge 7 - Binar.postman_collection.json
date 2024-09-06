@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "2086b388-85cc-401c-9120-df37122798d0",
+		"name": "Challenge 7 - Binar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28077573"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5100/api/v1/users",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5100/api/v1/users/U2409060001",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"U2409060001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlUyNDA5MDYwMDAzIiwiaWF0IjoxNzI1NjEzOTA4LCJleHAiOjE3MjU2MTc1MDh9.BYbhrjdz6uvGGOSkqUdy20-n6GddWOLJG5MGpihCPlw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mepilianti\",\r\n    \"email\": \"prawitamepilianti@gmail.com\",\r\n    \"password\": \"Password\",\r\n    \"phone\": \"081224558454\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5100/api/v1/users/U2409060003",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"U2409060003"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"prawitamepilianti@gmail.com\",\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5100/api/v1/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Praw\",\r\n    \"email\": \"prawitamepilianti@gmail.com\",\r\n    \"password\": \"Password\",\r\n    \"phone\": \"081224558454\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5100/api/v1/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Verify",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5100/api/v1/auth/verify/U2409060002",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"verify",
+								"U2409060002"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"prawitamepilianti@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5100/api/v1/auth/forgot-password",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"forgot-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reset Password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5100/api/v1/auth/reset-password/U2409060003",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"reset-password",
+								"U2409060003"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Messages",
+			"item": [
+				{
+					"name": "All Messages",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlUyNDA5MDYwMDAyIiwiaWF0IjoxNzI1NjE1ODA0LCJleHAiOjE3MjU2MTk0MDR9.-Z_SgWEIBv2SJgFR9bgmvhSXRKPgGtJ9UNVD0CxQ6yM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:5100/api/v1/messages",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"messages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Message",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IlUyNDA5MDYwMDAzIiwiaWF0IjoxNzI1NjE1MjQ3LCJleHAiOjE3MjU2MTg4NDd9.dS2yCYmzmKWbR71LwJ0xia6Rz_K1WXPiRZl22n4ytFs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sender_id\": \"U2409060003\",\r\n    \"receiver_id\": \"U2409060001\",\r\n    \"message\": \"Hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5100/api/v1/messages/U2409060003/U2409060001",
+							"host": [
+								"localhost"
+							],
+							"port": "5100",
+							"path": [
+								"api",
+								"v1",
+								"messages",
+								"U2409060003",
+								"U2409060001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
